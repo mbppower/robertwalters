@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: comexport
+  h2:
+    console:
+        enabled: false
+        path: /h2
+    datasource:
+      url: jdbc:h2:file:~/comexport
+      username: sa
+      password:
+      driver-class-name: org.h2.Driver
+
+ribbon:
+  ServerListRefreshInterval: 1000
+
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+
+

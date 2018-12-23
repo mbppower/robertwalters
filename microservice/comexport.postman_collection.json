@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "9fa6317e-227b-42de-a576-137f96fdf74e",
+		"name": "comexport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos-contabeis",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos-contabeis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"contaContabil\": 11181001,\n\t\"data\": 20170130,\n\t\"valor\": 25000.15\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos-contabeis",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos-contabeis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos-contabeis/fc22807f-1e08-45ca-9e12-4d1287ee38df",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos-contabeis",
+						"fc22807f-1e08-45ca-9e12-4d1287ee38df"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contaContabil",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos-contabeis/?contaContabil=11181001",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos-contabeis",
+						""
+					],
+					"query": [
+						{
+							"key": "contaContabil",
+							"value": "11181001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "_stats?contaContabil",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos-contabeis/_stats/?contaContabil=11181001",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos-contabeis",
+						"_stats",
+						""
+					],
+					"query": [
+						{
+							"key": "contaContabil",
+							"value": "11181001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "_stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/lancamentos-contabeis/_stats",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lancamentos-contabeis",
+						"_stats"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5b085fb3-505b-439d-bce9-5d429e95c161",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1dfca9e5-0067-4382-8dcb-8c9f61a7a5cf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,35 @@
+<div class="grid-container">
+    <div class="spinner-container" *ngIf="loading$ | async">
+        <mat-spinner></mat-spinner>
+    </div>
+    <div>
+        <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="20px" fxLayoutAlign="flex-start">
+            <div fxFlex="0 1 calc(50% - 20px)" fxFlex.lt-sm="100%" *ngFor="let item of movies">
+                <mat-card class="movie">
+
+                    <mat-card-header>
+                        <mat-card-title>{{item.title}} <span class="episode">Episódio {{item.episode_id}}</span></mat-card-title>
+                    </mat-card-header>
+
+                    <div mat-card-image class="cover" [ngStyle]="{'background-image': 'url(assets/films/episode_' + item.episode_id  + '.jpeg)'}"></div>
+
+                    <mat-card-content>
+                        <p>{{item.opening_crawl}}</p>
+
+                        <mat-divider></mat-divider>
+
+                        <div class="details">
+                            <p>
+                                <b>Diretor:</b> {{item.director}}<br />
+                                <b>Produtor:</b> {{item.producer}}<br />
+                                <b>Laçamento:</b> {{item.release_date | date: 'dd/MM/yyyy'}}
+                            </p>
+                        </div>
+
+                        <div class="characters-count">{{item.characters.length}} personagens</div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
