@@ -13,6 +13,12 @@ JDK 1.8
 gradlew test
 ```
 
+## Inicie o docker
+
+```
+Caso utilize o boot2docker inicie a VM
+```
+
 ## Crie a imagem da aplicação
 
 ```
