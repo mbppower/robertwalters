@@ -37,6 +37,8 @@ IMPORTANTE: Caso esteja utilizando boot2docker veja qual o IP da VM e utilize o 
 
 ```
 http://localhost:8080/
+
+O arquivo comexport.postman_collection.json contém as rotas de teste do Postman
 ```
 
 ## Para rodar a aplicação sem utilização do docker
